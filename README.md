@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wash Care Services</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+        header {
+            background-color: #005f73;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 5px 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .slider {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            max-width: 100%;
+        }
+        .slides img {
+            display:block;
+            margin: auto;
+            width: 80%;
+            height:300px;
+            border-radius: 10px;
+            display: none;
+        }
+        .slides img.active {
+            display: block;
+        }
+        .container {
+            padding: 40px;
+            text-align: center;
+            color: #333;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .feature {
+            background-color: #e0f7fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .booking-box {
+            background-color: #fff;
+            padding: 30px;
+            margin: 20px auto;
+            width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+        .booking-box h2 {
+            margin-bottom: 15px;
+            color: #005f73;
+        }
+        select, input, button {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #005f73;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #007f94;
+        }
+        footer {
+        background-color: #007f94;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 20px;
+        }
+
+        footer p {
+            margin: 5px;
+            font-size: 0.9rem;
+        }   
+    </style>
+    <script>
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.querySelectorAll('.slides img');
+            slides.forEach(slide => slide.classList.remove('active'));
+            slideIndex = (slideIndex + 1) % slides.length;
+            slides[slideIndex].classList.add('active');
+            setTimeout(showSlides, 3000);
+        }
+        window.onload = showSlides;
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Wash Care Services</h1>
+        <p>Washing Machine Repair Services in Mumbai</p>
+    </header>
+    <div class="slider">
+        <div class="slides">
+            <img src="images\aks.jpg" class="active" alt="Service 1">
+            <img src="images\aksd.jpg.jpg" alt="Service 2">
+            <img src="images\aks.jpg" alt="Service 3">
+        </div>
+    </div>
+    <div class="container">
+        <h2>Quick, Reliable & Affordable Repairs. Book a technician now!</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Quick Response</h3>
+                <p>Technician at your doorstep within 60 minutes.</p>
+            </div>
+            <div class="feature">
+                <h3>Expert Technicians</h3>
+                <p>Trained and background-verified staff.</p>
+            </div>
+            <div class="feature">
+                <h3>Affordable Pricing</h3>
+                <p>Transparent pricing with no hidden charges.</p>
+            </div>
+        </div>
+        <div class="booking-box">
+    <h2>Book a Service</h2>
+    <form action="https://yourdomain.infinityfreeapp.com/subfolder/submit.php
+" method="POST">
+  <input type="text" name="first_name" placeholder="First Name" required>
+  <input type="text" name="last_name" placeholder="Last Name" required>
+  <input type="text" name="contact_number" placeholder="Contact Number" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <select name="service_type" required>
+    <option value="AC Repair">AC Repair</option>
+    <option value="Plumbing">Plumbing</option>
+    <option value="Cleaning">Cleaning</option>
+    <!-- Add more services if needed -->
+  </select>
+  <input type="text" name="location" placeholder="Location" required>
+  <button type="submit">Submit</button>
+</form>
+</div>
+    </div>
+<footer>
+    <p>&copy; 2025 Wash Care Services. All rights reserved.</p>
+    <p>Contact Us: washcareservices@example.com | +91 98765 43210</p>
+</footer>
+</body>
+</html>
